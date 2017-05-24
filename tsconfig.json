@@ -6,13 +6,7 @@
         "sourceMap": true,
         "sourceRoot": "src",
         "outDir": "out",
-        "moduleResolution": "node",
-        "types": [
-            "node"
-        ],
-        "typeRoots": [
-            "node_modules/@types"
-        ]
+        "moduleResolution": "node"
     },
     "exclude": [
         "out",
