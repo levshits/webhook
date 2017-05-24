@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    "tasks": [
+        {
+            "taskName": "watch",
+            "command": "tsc",
+            "isShellCommand": true,
+            "args": ["-w"],
+            "showOutput": "always",
+            "isBackground": true,
+            "isBuildCommand": true,
+            "problemMatcher": "$tsc-watch"
+        },
+        {
+            "taskName": "build",
+            "command": "tsc",
+            "isShellCommand": true,
+            "args": ["--outDir", "dist"],
+            "showOutput": "always"
+        }
+    ]
+}
