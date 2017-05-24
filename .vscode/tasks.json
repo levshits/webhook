@@ -6,7 +6,7 @@
             "command": "tsc",
             "isShellCommand": true,
             "args": ["-w"],
-            "showOutput": "always",
+            "showOutput": "silent",
             "isBackground": true,
             "isBuildCommand": true,
             "problemMatcher": "$tsc-watch"
@@ -16,7 +16,7 @@
             "command": "tsc",
             "isShellCommand": true,
             "args": ["--outDir", "dist"],
-            "showOutput": "always"
+            "showOutput": "silent"
         }
     ]
 }

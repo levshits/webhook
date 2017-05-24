@@ -1,12 +1,14 @@
-import * as bodyParser from 'body-parser';
-import * as express from 'express';
-import * as path from 'path';
+import * as express from "express";
+import * as bodyParser from "body-parser";
+import * as path from "path";
+import {Server, Path, GET, PathParam} from "typescript-rest";
+import {HelloService} from './services/HelloService'
 
-class Server {
+class App {
     public app: express.Application;
 
-    public static bootstrap(): Server {
-        return new Server();
+    public static bootstrap(): App {
+        return new App();
     }
 
     constructor() {
@@ -20,7 +22,9 @@ class Server {
         this.app.use("/static", express.static(path.join(__dirname, "../static")));
     }
 }
-var serverInstance = Server.bootstrap();
+
+var serverInstance = App.bootstrap();
+
+Server.buildServices(serverInstance.app, HelloService);
+
 serverInstance.app.listen(3000);
-
-
